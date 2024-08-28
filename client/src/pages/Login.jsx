@@ -2,11 +2,21 @@ import React from 'react'
 import Google from '../img/google.png'
 import Facebook from '../img/facebook.png'
 import Github from '../img/github.png'
+import LinkedIn from '../img/linkedin3.png'
 
 const Login = () => {
 
     const google = () => {
         window.open("http://localhost:5000/auth/google","_self")
+    }
+    const github = () => {
+        window.open("http://localhost:5000/auth/github","_self")
+    }
+    const facebook = () => {
+        window.open("http://localhost:5000/auth/facebook","_self")
+    }
+    const linkedin = () => {
+        window.open("http://localhost:5000/auth/linkedin","_self")
     }
   return (
     <div className='Login'>
@@ -21,16 +31,21 @@ const Login = () => {
                 </div>
 
                 {/* facebook */}
-                <div className="loginBtn facebook ">
+                <div className="loginBtn facebook " onClick={facebook}>
                     <img src={Facebook} alt="" className='icon' />
                     Facebook
                 </div>
 
                 {/* github */}
 
-                <div className="loginBtn github ">
+                <div className="loginBtn github " onClick={github}>
                     <img src={Github} alt="" className='icon' />
                     GitHub
+                </div>
+
+                <div className="loginBtn linkedin " onClick={linkedin}>
+                    <img src={LinkedIn} alt="" className='icon' />
+                    LinkedIn
                 </div>
             </div>
             {/* For Center Horizontal Line */}
